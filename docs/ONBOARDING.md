@@ -20,7 +20,7 @@ The commands below target macOS/Linux shells. Native Windows is not verified; us
 ## 2. Clone and install
 
 ```sh
-git clone --branch feature/v4 https://github.com/manpinder-png/further-final.git
+git clone --branch feature/v5 https://github.com/manpinder-png/further-final.git
 cd further-final
 npm ci
 uv venv --python 3.12 .local/embedding-venv
@@ -30,7 +30,7 @@ uv pip install --python .local/embedding-venv/bin/python -r domains/retrieval/re
 
 The download uses the pinned `FacebookAI/roberta-base` revision and safetensors, without remote model code. Subsequent encoder startup uses the cached files offline. Do not change the reference mean or embedding revision to solve an installation problem.
 
-This guide runs the delivered v4 snapshot. Upstream source and contributor credits are recorded in [SOURCE.md](../SOURCE.md).
+This guide runs the v5 delivery branch. Upstream source and contributor credits are recorded in [SOURCE.md](../SOURCE.md).
 
 ## 3. Configure inference privately
 

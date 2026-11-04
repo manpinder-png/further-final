@@ -1,19 +1,19 @@
-# v4 development handoff
+# v5 development handoff
 
 Read this file when continuing the branch or giving the repository to a coding agent. Start with [onboarding](ONBOARDING.md) for execution and [AGENTS.md](../AGENTS.md) for engineering constraints.
 
 ## Snapshot and source of truth
 
-The delivery branch is `feature/v4` in `manpinder-png/further-final`. This repository uses independent delivery history: copy reviewed source changes from the team repository, record the upstream revision in [SOURCE.md](../SOURCE.md), and commit using the actual maintainer's Git identity. Preserve source contributor credits. Do not merge upstream Git ancestry into delivery branches. Use reviewed feature work and PRs for later integration.
+The delivery branch is `feature/v5` in `manpinder-png/further-final`. This repository uses independent delivery history: copy reviewed source changes from the team repository, record the upstream revision in [SOURCE.md](../SOURCE.md), and commit using the actual maintainer's Git identity. Preserve source contributor credits. Do not merge upstream Git ancestry into delivery branches. Use reviewed feature work and PRs for later integration.
 
-This milestone uses the v4 full-screen map and one resizable side panel, with learning history on Profile and a Review view. Its HTTP agent protocol is still **Further HTTP JSON v1**.
+v5 packages the v4 application with the product and architecture guides. It uses the full-screen map and one resizable side panel, with learning history on Profile and a Review view. Its HTTP agent protocol is still **Further HTTP JSON v1**.
 
 Use this reading order:
 
 1. `AGENTS.md`, this handoff and `README.md` — constraints and current scope.
 2. [Architecture](ARCHITECTURE.md) — components, dependency and streaming diagrams.
 3. Relevant domain guide: [UI](ui/README.md), [backend](../domains/backend/AGENTS.md), [data](data/README.md), [agents](agents/README.md), [retrieval](retrieval/README.md).
-4. Actual contracts and source files below and the [automated tests](../tests/).
+4. Actual contracts and source files below; the [test suites](../tests/) exercise runtime contracts.
 
 Older `DESIGN.md`, discussion slides and business-requirement drafts preserve earlier proposals. They do not override the implemented contracts or later user decisions.
 

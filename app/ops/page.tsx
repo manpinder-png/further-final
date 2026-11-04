@@ -16,9 +16,8 @@ export default function Page() {
       </p>
       <p className="text-white/70">
         Open the current architecture view for agent contracts, model routing and
-        the data schema. For source ownership, setup and regression checks, read{" "}
-        <code>docs/CODE_MAP.md</code>, <code>docs/HANDOFF.md</code> and{" "}
-        <code>tests/</code> in the repository.
+        the data schema. For source ownership and setup, read{" "}
+        <code>docs/CODE_MAP.md</code> and <code>docs/HANDOFF.md</code> in the repository.
       </p>
       <Link className="inline-block text-sky-300 underline underline-offset-4" href="/architecture">
         Open current architecture
