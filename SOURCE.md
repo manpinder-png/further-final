@@ -1,8 +1,10 @@
-# v4 source snapshot and credits
+# Source and contributor credits
 
 This delivery repository starts an independent Git history from a copy of the
 Further v4 source. A snapshot-import commit records the delivery operation; it
 does not represent sole authorship of the imported implementation.
+
+v5 adds the project overview, architecture and dependency map to the v4 delivery snapshot. The upstream details below identify the original import.
 
 ## Source
 
@@ -13,8 +15,8 @@ does not represent sole authorship of the imported implementation.
 - Delivery branch: `manpinder-png/further-final:feature/v4`
 
 The original development history remains available in the source repository.
-The application comes from that revision. Delivery documentation and builder-facing
-reference text reflect this repository.
+The application was imported from that revision. Delivery changes update the
+public documentation and the documentation references shown in the application.
 
 ## Contributor credits
 

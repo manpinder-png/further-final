@@ -2,7 +2,7 @@
 
 Further has two connected maps. **My knowledge map** holds what one person has explored across their saved questions. **Geomind** helps that person find other learners around shared ideas. Starting a new question changes the focus; it does not replace the learning history.
 
-The current implementation keeps the v1 journey, central canvas, inspector and bottom composer. Three views within that canvas make the distinction visible:
+The full-screen map and its side panel offer three views.
 
 | View | What it answers | What it shows |
 |---|---|---|
@@ -27,7 +27,7 @@ flowchart LR
   Concepts --> Match[Existing canonical concept IDs for matching]
 ```
 
-The derived summary is private and cached by owner, graph content hash, prompt version and inference mode. Reopening an unchanged map reuses the saved result; ordinary learning events do not regenerate the grouping. Changing concepts or relationships invalidates it. Live summary generation streams actual Meta activity and text; only the validated result becomes the overview. Summarization does not alter current intent, learning events, sharing choices or peer scores. Large maps beyond the current complete-snapshot budget produce an explicit limit rather than silently summarizing a truncated subset.
+The derived summary is private and cached by owner, graph content hash, prompt version and inference mode. Reopening an unchanged map reuses the saved result; ordinary learning events do not regenerate the grouping. Changing concepts or relationships invalidates it. Live summary generation streams actual Meta activity and text; only the validated result becomes the overview. Summarization does not alter current intent, learning events, sharing choices or peer scores. Large maps are summarized in bounded batches, with deeper branches generated on demand.
 
 ## Conceptual neighborhood
 
@@ -90,7 +90,7 @@ The peer-guide tool can pass a typed query to `rankedPeers`. The local encoder f
 ```mermaid
 flowchart TD
   History[Private learning records] --> Index[Versioned derived concept vectors]
-  Scope[Authenticated owned scope] --> Search[Exact local pgvector search]
+  Scope[Authenticated owned scope] --> Search[Exact pgvector search]
   Index --> Search
   Consent[Consent and adult confirmation] --> Eligible[Eligible active-topic projection]
   Presence[Fresh presence and compatible time] --> Eligible

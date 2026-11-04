@@ -28,7 +28,7 @@ export const FUNCTIONAL: Req[] = [
 ];
 
 export const NONFUNCTIONAL: Req[] = [
-  { id: "N1", name: "Latency targets: first node < 2.5s · cached card < 500ms · match < 30s", owner: "Connor", ui: "Historical performance targets", hook: "Historical targets awaiting performance validation", status: "todo" },
+  { id: "N1", name: "Latency targets: first node < 2.5s · cached card < 500ms · match < 30s", owner: "Connor", ui: "Historical performance targets", hook: "Historical targets; performance depends on the deployment", status: "todo" },
   { id: "N2", name: "Mobile-first, works on demo phones", owner: "Sirpreet", ui: "Bottom sheets, pinned command bar", hook: "—", status: "ui" },
   { id: "N3", name: "Authenticated server authorization, validation and server-only secrets", owner: "Connor", ui: "Current trust boundaries are documented separately", hook: "Backend ownership checks; legacy Supabase RLS is not the deployed authorization layer", status: "wired" },
   { id: "N4", name: "Block/report and adult eligibility; automated classifier remains planned", owner: "Amit", ui: "Session moderation status must state its limitations", hook: "No Llama Guard/content classifier is configured for message delivery", status: "todo" },
@@ -54,7 +54,7 @@ export const TRUST = [
   { check: "Errors to Sentry", where: "lib/server/observability.ts", status: "stub" as Status },
   { check: "No secrets in client bundle", where: "lib/server/* import 'server-only'", status: "live" as Status },
   { check: "Source URLs host-allowlisted (no SSRF)", where: "/api/resources/verify", status: "live" as Status },
-  { check: "Load-test target: 20 concurrent simulated users", where: "Load-test target awaiting measurement", status: "todo" as Status },
+  { check: "Load-test target: 20 concurrent simulated users", where: "Historical load-test target", status: "todo" as Status },
   { check: "Meta-only runtime inference policy", where: "Current provider routing and allowed models: /architecture and domains/agents", status: "wired" as Status },
 ];
 
