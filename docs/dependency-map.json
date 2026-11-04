@@ -1,0 +1,2751 @@
+{
+  "generatedAt": "2026-11-03T19:24:41.348Z",
+  "generator": "scripts/dependency-map.mjs",
+  "sourceFiles": 158,
+  "localImports": 496,
+  "domains": [
+    {
+      "id": "ui",
+      "fileCount": 49
+    },
+    {
+      "id": "backend",
+      "fileCount": 62
+    },
+    {
+      "id": "agents",
+      "fileCount": 10
+    },
+    {
+      "id": "data",
+      "fileCount": 6
+    },
+    {
+      "id": "retrieval",
+      "fileCount": 3
+    },
+    {
+      "id": "shared",
+      "fileCount": 28
+    }
+  ],
+  "domainEdges": [
+    {
+      "from": "backend",
+      "to": "agents",
+      "count": 13
+    },
+    {
+      "from": "backend",
+      "to": "data",
+      "count": 45
+    },
+    {
+      "from": "backend",
+      "to": "shared",
+      "count": 25
+    },
+    {
+      "from": "backend",
+      "to": "retrieval",
+      "count": 7
+    },
+    {
+      "from": "ui",
+      "to": "agents",
+      "count": 5
+    },
+    {
+      "from": "ui",
+      "to": "shared",
+      "count": 52
+    },
+    {
+      "from": "ui",
+      "to": "data",
+      "count": 1
+    },
+    {
+      "from": "shared",
+      "to": "retrieval",
+      "count": 1
+    },
+    {
+      "from": "shared",
+      "to": "ui",
+      "count": 1
+    },
+    {
+      "from": "agents",
+      "to": "shared",
+      "count": 2
+    },
+    {
+      "from": "backend",
+      "to": "ui",
+      "count": 1
+    },
+    {
+      "from": "data",
+      "to": "shared",
+      "count": 6
+    },
+    {
+      "from": "data",
+      "to": "retrieval",
+      "count": 2
+    },
+    {
+      "from": "retrieval",
+      "to": "data",
+      "count": 2
+    },
+    {
+      "from": "retrieval",
+      "to": "shared",
+      "count": 1
+    }
+  ],
+  "files": [
+    "app/api/agents/invoke/route.ts",
+    "app/api/agents/route.ts",
+    "app/api/agents/[agentId]/route.ts",
+    "app/api/auth/account/route.ts",
+    "app/api/auth/cognito/callback/route.ts",
+    "app/api/auth/cognito/start/route.ts",
+    "app/api/auth/confirm/route.ts",
+    "app/api/auth/google/callback/route.ts",
+    "app/api/auth/google/start/route.ts",
+    "app/api/auth/login/route.ts",
+    "app/api/auth/logout/route.ts",
+    "app/api/auth/resend/route.ts",
+    "app/api/auth/session/route.ts",
+    "app/api/auth/signup/route.ts",
+    "app/api/card/[slug]/route.ts",
+    "app/api/course/route.ts",
+    "app/api/data/bootstrap/route.ts",
+    "app/api/data/completions/route.ts",
+    "app/api/data/concepts/route.ts",
+    "app/api/data/events/route.ts",
+    "app/api/data/profile/route.ts",
+    "app/api/data/reset/route.ts",
+    "app/api/expand/route.ts",
+    "app/api/explain/route.ts",
+    "app/api/geomind/invite/route.ts",
+    "app/api/geomind/route.ts",
+    "app/api/health/route.ts",
+    "app/api/inbox/route.ts",
+    "app/api/knowledge/overview/read/route.ts",
+    "app/api/knowledge/overview/route.ts",
+    "app/api/local/identity/route.ts",
+    "app/api/local/indexing/route.ts",
+    "app/api/local/presence/route.ts",
+    "app/api/local/reindex/route.ts",
+    "app/api/local/search/route.ts",
+    "app/api/local/sessions/[id]/block/route.ts",
+    "app/api/local/sessions/[id]/report/route.ts",
+    "app/api/local/sessions/[id]/route.ts",
+    "app/api/match/route.ts",
+    "app/api/mcp/route.ts",
+    "app/api/media/understand/route.ts",
+    "app/api/media/[id]/route.ts",
+    "app/api/resources/verify/route.ts",
+    "app/api/session/[id]/end/route.ts",
+    "app/api/session/[id]/message/route.ts",
+    "app/api/teach/route.ts",
+    "app/api/transcribe/route.ts",
+    "app/architecture/page.tsx",
+    "app/connectors/page.tsx",
+    "app/layout.tsx",
+    "app/login/page.tsx",
+    "app/ops/page.tsx",
+    "app/page.tsx",
+    "app/profile/page.tsx",
+    "app/session/page.tsx",
+    "app/signup/page.tsx",
+    "components/activity/ActivityPanel.tsx",
+    "components/activity/IndexingStatus.tsx",
+    "components/architecture/ArchitectureExplorer.tsx",
+    "components/auth/AuthForm.tsx",
+    "components/builder/AgentLog.tsx",
+    "components/builder/ConnectorConsole.tsx",
+    "components/builder/LocalIdentity.tsx",
+    "components/builder/OpsConsole.tsx",
+    "components/learn/Teach.tsx",
+    "components/map/GeomindMap.tsx",
+    "components/map/KnowledgeMap.tsx",
+    "components/mission/AgentAssistant.tsx",
+    "components/mission/CommandBar.tsx",
+    "components/mission/GeomindInspector.tsx",
+    "components/mission/History.tsx",
+    "components/mission/Inspector.tsx",
+    "components/mission/KnowledgeOverviewInspector.tsx",
+    "components/mission/MatchModal.tsx",
+    "components/mission/PanelResizer.tsx",
+    "components/mission/Review.tsx",
+    "components/mission/SidePanel.tsx",
+    "components/mission/TimeLapse.tsx",
+    "components/shell/TopBar.tsx",
+    "components/ui/bits.tsx",
+    "components/ui/Mermaid.tsx",
+    "lib/auth-contracts.ts",
+    "lib/builder.ts",
+    "lib/canonicalize.ts",
+    "lib/client/audio.ts",
+    "lib/client/format.ts",
+    "lib/client/hooks.ts",
+    "lib/client/learning-paths.ts",
+    "lib/client/lesson-state.ts",
+    "lib/client/live.ts",
+    "lib/client/narration.ts",
+    "lib/client/store.tsx",
+    "lib/client/stream.ts",
+    "lib/client/use-completion-counts.ts",
+    "lib/client/use-geomind.ts",
+    "lib/client/use-knowledge-overview.ts",
+    "lib/client/useAIStream.ts",
+    "lib/completions.ts",
+    "lib/demo/seed.ts",
+    "lib/geomind-layout.ts",
+    "lib/geomind.ts",
+    "lib/graph-layout.ts",
+    "lib/insight.ts",
+    "lib/knowledge-hierarchy.ts",
+    "lib/knowledge-overview.ts",
+    "lib/layout.ts",
+    "lib/learn.ts",
+    "lib/matching.ts",
+    "lib/math.ts",
+    "lib/mcp-tools.ts",
+    "lib/parse-expansion.ts",
+    "lib/requirements.ts",
+    "lib/review.ts",
+    "lib/schemas.ts",
+    "lib/server/config.ts",
+    "lib/server/meta.ts",
+    "lib/server/moderation.ts",
+    "lib/server/observability.ts",
+    "lib/server/ratelimit.ts",
+    "lib/server/store.ts",
+    "lib/server/supabase.ts",
+    "lib/types.ts",
+    "domains/agents/audio.ts",
+    "domains/agents/contracts.ts",
+    "domains/agents/evidence.ts",
+    "domains/agents/fixture-model.ts",
+    "domains/agents/index.ts",
+    "domains/agents/openai-provider.ts",
+    "domains/agents/provider-streams.ts",
+    "domains/agents/runtime.ts",
+    "domains/agents/streaming-json.ts",
+    "domains/agents/transcription-stream.ts",
+    "domains/backend/agents.ts",
+    "domains/backend/auth.ts",
+    "domains/backend/cognito-auth.ts",
+    "domains/backend/cognito-config.ts",
+    "domains/backend/cognito-oauth.ts",
+    "domains/backend/geomind.ts",
+    "domains/backend/google-auth.ts",
+    "domains/backend/http.ts",
+    "domains/backend/identity.ts",
+    "domains/backend/knowledge-overview.ts",
+    "domains/backend/media-storage.ts",
+    "domains/backend/missions.ts",
+    "domains/backend/social.ts",
+    "domains/backend/source-verification.ts",
+    "domains/backend/streaming.ts",
+    "domains/data/aurora-data-api.ts",
+    "domains/data/auth-contracts.ts",
+    "domains/data/auth-store.ts",
+    "domains/data/contracts.ts",
+    "domains/data/repository.ts",
+    "domains/data/sql.ts",
+    "domains/retrieval/client.ts",
+    "domains/retrieval/projection.ts",
+    "domains/retrieval/space.ts",
+    "domains/ui/activity.ts",
+    "domains/ui/contracts.ts"
+  ],
+  "imports": [
+    {
+      "from": "app/api/agents/invoke/route.ts",
+      "to": "domains/agents/index.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/invoke/route.ts",
+      "to": "domains/backend/agents.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/invoke/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/invoke/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/invoke/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/route.ts",
+      "to": "domains/agents/index.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/[agentId]/route.ts",
+      "to": "domains/agents/index.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/[agentId]/route.ts",
+      "to": "domains/backend/agents.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/[agentId]/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/[agentId]/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/agents/[agentId]/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/account/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/account/route.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/account/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/cognito/callback/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/cognito/callback/route.ts",
+      "to": "domains/backend/cognito-oauth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/cognito/start/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/cognito/start/route.ts",
+      "to": "domains/backend/cognito-oauth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/confirm/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/confirm/route.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/confirm/route.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/confirm/route.ts",
+      "to": "domains/backend/cognito-auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/google/callback/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/google/callback/route.ts",
+      "to": "domains/backend/google-auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/google/callback/route.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/google/start/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/google/start/route.ts",
+      "to": "domains/backend/google-auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/google/start/route.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/login/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/login/route.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/login/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/login/route.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/login/route.ts",
+      "to": "domains/backend/cognito-auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/logout/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/logout/route.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/logout/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/logout/route.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/logout/route.ts",
+      "to": "domains/backend/cognito-auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/logout/route.ts",
+      "to": "domains/backend/cognito-oauth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/resend/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/resend/route.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/resend/route.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/resend/route.ts",
+      "to": "domains/backend/cognito-auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/session/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/session/route.ts",
+      "to": "domains/backend/google-auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/session/route.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/session/route.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/signup/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/signup/route.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/signup/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/signup/route.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/auth/signup/route.ts",
+      "to": "domains/backend/cognito-auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/card/[slug]/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/card/[slug]/route.ts",
+      "to": "domains/backend/agents.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/card/[slug]/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/card/[slug]/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/card/[slug]/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/card/[slug]/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/course/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/course/route.ts",
+      "to": "domains/backend/agents.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/course/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/course/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/course/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/bootstrap/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/bootstrap/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/bootstrap/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/bootstrap/route.ts",
+      "to": "domains/backend/social.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/bootstrap/route.ts",
+      "to": "domains/backend/missions.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/bootstrap/route.ts",
+      "to": "domains/retrieval/client.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/completions/route.ts",
+      "to": "lib/completions.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/completions/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/completions/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/completions/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/concepts/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/concepts/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/concepts/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/concepts/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/events/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/events/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/events/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/events/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/profile/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/profile/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/profile/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/profile/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/reset/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/reset/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/data/reset/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/expand/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/expand/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/expand/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/expand/route.ts",
+      "to": "domains/backend/agents.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/expand/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/expand/route.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "app/api/explain/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/explain/route.ts",
+      "to": "domains/backend/agents.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/explain/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/explain/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/explain/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/explain/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/geomind/invite/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/geomind/invite/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/geomind/invite/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/geomind/invite/route.ts",
+      "to": "domains/backend/geomind.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/geomind/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/geomind/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/geomind/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/geomind/route.ts",
+      "to": "domains/backend/geomind.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/health/route.ts",
+      "to": "lib/server/config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/health/route.ts",
+      "to": "domains/retrieval/client.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/health/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/inbox/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/inbox/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/knowledge/overview/read/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/knowledge/overview/read/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/knowledge/overview/read/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/knowledge/overview/read/route.ts",
+      "to": "domains/backend/knowledge-overview.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/knowledge/overview/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/knowledge/overview/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/knowledge/overview/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/knowledge/overview/route.ts",
+      "to": "domains/backend/knowledge-overview.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/knowledge/overview/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/identity/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/identity/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/indexing/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/indexing/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/indexing/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/indexing/route.ts",
+      "to": "domains/retrieval/client.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/presence/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/presence/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/presence/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/presence/route.ts",
+      "to": "domains/backend/social.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/reindex/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/reindex/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/reindex/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/reindex/route.ts",
+      "to": "domains/retrieval/client.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/search/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/search/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/search/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/search/route.ts",
+      "to": "domains/retrieval/client.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/block/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/block/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/block/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/report/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/report/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/report/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/local/sessions/[id]/route.ts",
+      "to": "domains/backend/social.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/match/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/match/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/match/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/match/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/match/route.ts",
+      "to": "domains/backend/social.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/mcp/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/understand/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/understand/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/understand/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/understand/route.ts",
+      "to": "domains/backend/agents.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/understand/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/understand/route.ts",
+      "to": "domains/backend/media-storage.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/[id]/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/[id]/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/[id]/route.ts",
+      "to": "domains/backend/media-storage.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/media/[id]/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/resources/verify/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/resources/verify/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/resources/verify/route.ts",
+      "to": "domains/backend/source-verification.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/resources/verify/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/end/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/end/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/end/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/end/route.ts",
+      "to": "domains/backend/social.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/message/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/message/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/message/route.ts",
+      "to": "domains/backend/agents.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/message/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/message/route.ts",
+      "to": "domains/backend/social.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/session/[id]/message/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/teach/route.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/teach/route.ts",
+      "to": "domains/backend/agents.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/teach/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/teach/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/teach/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/teach/route.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/teach/route.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/transcribe/route.ts",
+      "to": "domains/agents/audio.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/transcribe/route.ts",
+      "to": "domains/agents/openai-provider.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/transcribe/route.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/transcribe/route.ts",
+      "to": "domains/backend/streaming.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/api/transcribe/route.ts",
+      "to": "domains/backend/identity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/architecture/page.tsx",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/architecture/page.tsx",
+      "to": "domains/agents/openai-provider.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/architecture/page.tsx",
+      "to": "components/architecture/ArchitectureExplorer.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/connectors/page.tsx",
+      "to": "lib/builder.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/connectors/page.tsx",
+      "to": "components/builder/ConnectorConsole.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/layout.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/layout.tsx",
+      "to": "components/shell/TopBar.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/login/page.tsx",
+      "to": "components/auth/AuthForm.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/ops/page.tsx",
+      "to": "lib/builder.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/client/learning-paths.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/mission/SidePanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/mission/Inspector.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/mission/Review.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/mission/PanelResizer.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/mission/MatchModal.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/mission/TimeLapse.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/math.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/map/GeomindMap.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/mission/GeomindInspector.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/client/use-geomind.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/client/use-knowledge-overview.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/client/use-completion-counts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "components/mission/KnowledgeOverviewInspector.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/knowledge-overview.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "app/page.tsx",
+      "to": "lib/knowledge-hierarchy.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/profile/page.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/profile/page.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/profile/page.tsx",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/profile/page.tsx",
+      "to": "components/builder/LocalIdentity.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/profile/page.tsx",
+      "to": "components/mission/History.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/session/page.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/session/page.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/session/page.tsx",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "app/session/page.tsx",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/session/page.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/session/page.tsx",
+      "to": "lib/client/useAIStream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "app/session/page.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "app/signup/page.tsx",
+      "to": "components/auth/AuthForm.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/activity/ActivityPanel.tsx",
+      "to": "domains/ui/activity.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/activity/IndexingStatus.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/activity/IndexingStatus.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/activity/IndexingStatus.tsx",
+      "to": "domains/data/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/architecture/ArchitectureExplorer.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/architecture/ArchitectureExplorer.tsx",
+      "to": "lib/builder.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/auth/AuthForm.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/auth/AuthForm.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/auth/AuthForm.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/AgentLog.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/AgentLog.tsx",
+      "to": "lib/client/hooks.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/AgentLog.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/AgentLog.tsx",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/builder/ConnectorConsole.tsx",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/builder/ConnectorConsole.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/ConnectorConsole.tsx",
+      "to": "lib/client/useAIStream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/ConnectorConsole.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/ConnectorConsole.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/ConnectorConsole.tsx",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/LocalIdentity.tsx",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/builder/LocalIdentity.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/LocalIdentity.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/LocalIdentity.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/OpsConsole.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/builder/OpsConsole.tsx",
+      "to": "lib/requirements.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/learn/Teach.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/learn/Teach.tsx",
+      "to": "lib/learn.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/learn/Teach.tsx",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/learn/Teach.tsx",
+      "to": "lib/client/useAIStream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/learn/Teach.tsx",
+      "to": "lib/client/stream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/learn/Teach.tsx",
+      "to": "lib/client/lesson-state.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/learn/Teach.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/map/GeomindMap.tsx",
+      "to": "lib/geomind.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/map/GeomindMap.tsx",
+      "to": "lib/geomind-layout.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/map/GeomindMap.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/map/GeomindMap.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/map/KnowledgeMap.tsx",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/map/KnowledgeMap.tsx",
+      "to": "lib/insight.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/map/KnowledgeMap.tsx",
+      "to": "lib/graph-layout.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/map/KnowledgeMap.tsx",
+      "to": "lib/knowledge-overview.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/map/KnowledgeMap.tsx",
+      "to": "lib/math.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/map/KnowledgeMap.tsx",
+      "to": "lib/client/format.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/map/KnowledgeMap.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/AgentAssistant.tsx",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/mission/AgentAssistant.tsx",
+      "to": "lib/client/useAIStream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/AgentAssistant.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/AgentAssistant.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/AgentAssistant.tsx",
+      "to": "lib/builder.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/AgentAssistant.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/CommandBar.tsx",
+      "to": "lib/client/hooks.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/CommandBar.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/CommandBar.tsx",
+      "to": "lib/client/useAIStream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/CommandBar.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/CommandBar.tsx",
+      "to": "components/mission/AgentAssistant.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/CommandBar.tsx",
+      "to": "components/activity/IndexingStatus.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/GeomindInspector.tsx",
+      "to": "lib/geomind.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/mission/GeomindInspector.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/GeomindInspector.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/History.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/History.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/History.tsx",
+      "to": "lib/demo/seed.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/History.tsx",
+      "to": "lib/client/format.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "lib/client/hooks.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "components/learn/Teach.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "lib/client/useAIStream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "components/ui/Mermaid.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "lib/client/format.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "lib/client/learning-paths.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "lib/review.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Inspector.tsx",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/mission/KnowledgeOverviewInspector.tsx",
+      "to": "lib/knowledge-overview.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/mission/KnowledgeOverviewInspector.tsx",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/mission/MatchModal.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/MatchModal.tsx",
+      "to": "lib/demo/seed.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/MatchModal.tsx",
+      "to": "lib/matching.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/MatchModal.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/MatchModal.tsx",
+      "to": "lib/builder.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/MatchModal.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/MatchModal.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Review.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Review.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Review.tsx",
+      "to": "lib/client/format.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/Review.tsx",
+      "to": "lib/client/learning-paths.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "components/mission/Review.tsx",
+      "to": "lib/review.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/SidePanel.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/SidePanel.tsx",
+      "to": "lib/client/format.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/SidePanel.tsx",
+      "to": "lib/client/learning-paths.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/SidePanel.tsx",
+      "to": "lib/client/hooks.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/SidePanel.tsx",
+      "to": "components/activity/ActivityPanel.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/SidePanel.tsx",
+      "to": "components/mission/CommandBar.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/mission/TimeLapse.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/shell/TopBar.tsx",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/shell/TopBar.tsx",
+      "to": "components/ui/bits.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "components/shell/TopBar.tsx",
+      "to": "lib/builder.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "components/ui/bits.tsx",
+      "to": "lib/builder.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/format.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/layout.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/demo/seed.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/matching.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/math.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/learn.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/client/audio.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/client/useAIStream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/hooks.ts",
+      "to": "lib/client/stream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/learning-paths.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/learning-paths.ts",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/lesson-state.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/live.ts",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/live.ts",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/narration.ts",
+      "to": "lib/client/store.tsx",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/narration.ts",
+      "to": "lib/insight.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/narration.ts",
+      "to": "lib/client/format.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "lib/math.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "lib/insight.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "lib/demo/seed.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "lib/layout.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "lib/server/config.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/store.tsx",
+      "to": "lib/auth-contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/stream.ts",
+      "to": "domains/ui/activity.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/use-completion-counts.ts",
+      "to": "lib/completions.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/use-completion-counts.ts",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/use-geomind.ts",
+      "to": "lib/geomind.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/use-geomind.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/use-geomind.ts",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/use-knowledge-overview.ts",
+      "to": "lib/knowledge-overview.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/client/use-knowledge-overview.ts",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/use-knowledge-overview.ts",
+      "to": "lib/client/useAIStream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/use-knowledge-overview.ts",
+      "to": "lib/client/stream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/useAIStream.ts",
+      "to": "domains/ui/activity.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/useAIStream.ts",
+      "to": "lib/client/live.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/client/useAIStream.ts",
+      "to": "lib/client/stream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/demo/seed.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/geomind-layout.ts",
+      "to": "lib/geomind.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/geomind.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/graph-layout.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/insight.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/insight.ts",
+      "to": "lib/demo/seed.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/insight.ts",
+      "to": "lib/math.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/knowledge-hierarchy.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/knowledge-hierarchy.ts",
+      "to": "lib/knowledge-overview.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/layout.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/learn.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/matching.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/matching.ts",
+      "to": "domains/retrieval/space.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/math.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/review.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/review.ts",
+      "to": "lib/client/learning-paths.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "lib/server/meta.ts",
+      "to": "lib/server/config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/server/moderation.ts",
+      "to": "lib/server/config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/server/observability.ts",
+      "to": "lib/server/config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/server/ratelimit.ts",
+      "to": "lib/server/config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "lib/server/supabase.ts",
+      "to": "lib/server/config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/audio.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/evidence.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/agents/fixture-model.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/agents/openai-provider.ts",
+      "to": "domains/agents/audio.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/openai-provider.ts",
+      "to": "domains/agents/provider-streams.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/openai-provider.ts",
+      "to": "domains/agents/transcription-stream.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/openai-provider.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/provider-streams.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/runtime.ts",
+      "to": "domains/agents/streaming-json.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/runtime.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/runtime.ts",
+      "to": "lib/knowledge-overview.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/streaming-json.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/agents/transcription-stream.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "domains/agents/index.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "domains/agents/openai-provider.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "domains/agents/evidence.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "domains/retrieval/client.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "domains/backend/social.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "lib/knowledge-overview.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/agents.ts",
+      "to": "domains/backend/knowledge-overview.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/auth.ts",
+      "to": "domains/data/auth-contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/auth.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/auth.ts",
+      "to": "domains/data/auth-store.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/auth.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-auth.ts",
+      "to": "domains/data/auth-contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/cognito-auth.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-auth.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-auth.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-auth.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-config.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-oauth.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-oauth.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-oauth.ts",
+      "to": "domains/backend/cognito-auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-oauth.ts",
+      "to": "domains/backend/cognito-config.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/cognito-oauth.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/geomind.ts",
+      "to": "lib/geomind.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/geomind.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/geomind.ts",
+      "to": "lib/matching.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/geomind.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/geomind.ts",
+      "to": "domains/data/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/geomind.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/geomind.ts",
+      "to": "domains/backend/social.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/google-auth.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/google-auth.ts",
+      "to": "domains/data/auth-store.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/google-auth.ts",
+      "to": "lib/auth-contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/google-auth.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/google-auth.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/identity.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/identity.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/identity.ts",
+      "to": "domains/backend/auth.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/knowledge-overview.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/knowledge-overview.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/knowledge-overview.ts",
+      "to": "domains/data/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/knowledge-overview.ts",
+      "to": "domains/data/repository.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/knowledge-overview.ts",
+      "to": "lib/knowledge-overview.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/knowledge-overview.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/media-storage.ts",
+      "to": "domains/data/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/media-storage.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/missions.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/missions.ts",
+      "to": "domains/ui/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/social.ts",
+      "to": "domains/data/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/social.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/social.ts",
+      "to": "lib/geomind.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/social.ts",
+      "to": "lib/matching.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/social.ts",
+      "to": "lib/schemas.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/social.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/social.ts",
+      "to": "domains/retrieval/client.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/backend/streaming.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/backend/streaming.ts",
+      "to": "domains/backend/http.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/data/aurora-data-api.ts",
+      "to": "domains/data/sql.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/data/auth-contracts.ts",
+      "to": "lib/auth-contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/data/auth-store.ts",
+      "to": "domains/data/auth-contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/data/auth-store.ts",
+      "to": "domains/data/sql.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/data/contracts.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/data/contracts.ts",
+      "to": "domains/data/auth-contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/data/contracts.ts",
+      "to": "lib/completions.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/data/repository.ts",
+      "to": "lib/math.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/data/repository.ts",
+      "to": "lib/completions.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/data/repository.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/data/repository.ts",
+      "to": "domains/data/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/data/repository.ts",
+      "to": "domains/data/auth-store.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/data/repository.ts",
+      "to": "domains/retrieval/space.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/data/repository.ts",
+      "to": "domains/retrieval/projection.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/data/repository.ts",
+      "to": "domains/data/sql.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/retrieval/client.ts",
+      "to": "domains/data/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/retrieval/client.ts",
+      "to": "domains/retrieval/space.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/retrieval/client.ts",
+      "to": "domains/retrieval/projection.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/retrieval/projection.ts",
+      "to": "domains/data/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/retrieval/projection.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/retrieval/projection.ts",
+      "to": "domains/retrieval/space.ts",
+      "typeOnly": false
+    },
+    {
+      "from": "domains/ui/activity.ts",
+      "to": "domains/agents/contracts.ts",
+      "typeOnly": true
+    },
+    {
+      "from": "domains/ui/contracts.ts",
+      "to": "lib/types.ts",
+      "typeOnly": true
+    }
+  ]
+}
